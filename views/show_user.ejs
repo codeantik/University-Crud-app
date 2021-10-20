@@ -1,0 +1,24 @@
+<%- include('layout/header.ejs') %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="container my-4" style="display: flex; align-items: center; justify-content: space-evenly; height: 100%">
+                <div class="info my-4">
+                    <h2 style="text-transform: capitalize;"><%= user.name %></h2>
+                    <h3><%= user.email %> </h3>
+                    <p style="font-size: 1.5em;"><%= user.mobile %></p>
+                    <p style="font-size: 1.3em;"><%= user.address %></p>
+                    <p style="font-size: 1.3em;"><%= user.salary %> </p>
+                    <p style="font-size: 1.3em;"><%= user.spouse %> </p>
+                    <p style="font-size: 1.3em;"><%= user.achievements %> </p>
+                    <p style="font-size: 1.3em;"><%= user.bio %> </p>
+                    <a href="/edit/<%= user._id %>" class="text-success"><i class="fas fa-edit fa-lg mx-1"></i></a>
+                    <a href="/delete/<%= user._id %>" class="text-danger"><i class="fas fa-trash fa-lg mx-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('layout/footer.ejs') %> 
